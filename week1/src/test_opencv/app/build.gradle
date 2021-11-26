@@ -59,11 +59,4 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
 
     implementation project(':opencv')
-
-    //implementation 'org.apache.commons:commons-math3:+'
-    //implementation 'com.android.support:support-v13:25.2.0'
-
-    //implementation(name: 'libandroid_tensorflow_inference_java', ext: 'jar')
-    //implementation(name:'openCVLibrary341-release', ext:'aar')
-    //implementation(name: 'tensorflow-lite', ext: 'aar')
 }
