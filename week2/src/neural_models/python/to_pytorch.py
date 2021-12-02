@@ -39,37 +39,12 @@ if __name__ == '__main__':
             model = get_model(model_name,all_models[model_name])
             model.eval()
             quantized_model = torch.quantization.quantize_dynamic(model, dtype=torch.qint8)
-            if True:
-                traced_script_module = torch.jit.trace(model, example)
-                #traced_script_module.save(filename+'.pt')
-                traced_script_module_optimized = optimize_for_mobile(traced_script_module)
-                traced_script_module_optimized._save_for_lite_interpreter(filename+'.ptl')
+            traced_script_module = torch.jit.trace(model, example)
+            #traced_script_module.save(filename+'.pt')
+            traced_script_module_optimized = optimize_for_mobile(traced_script_module)
+            traced_script_module_optimized._save_for_lite_interpreter(filename+'.ptl')
 
-                traced_script_module = torch.jit.trace(quantized_model, example)
-                #traced_script_module.save(filename+'_quant.pt')
-                traced_script_module_optimized = optimize_for_mobile(traced_script_module)
-                traced_script_module_optimized._save_for_lite_interpreter(filename+'_quant.ptl')
-            else:
-                transform = transforms.Compose([
-                    transforms.Resize(INPUT_SIZE),
-                    #transforms.CenterCrop(INPUT_SIZE),
-                    transforms.ToTensor(),
-                    transforms.Normalize(
-                        mean=[0.485, 0.456, 0.406],
-                        std=[0.229, 0.224, 0.225])
-                        ])
-
-                # image
-                img = Image.open('D:/src_code/mobile/MADE/MADE-mobile-image-processing-2020/lesson1/src/test_pytorch/mobile_app/app/src/main/assets/cat.2013.jpg')
-                img = transform(img)
-                img = torch.unsqueeze(img, 0)
-                print(model_name)
-                print(img.shape)
-
-                model.eval()
-                out = model(img)
-                percents = torch.nn.functional.softmax(out, dim=1)[0] * 100
-                percents=percents.reshape((-1))
-                print('percents:',percents.shape,out.shape)
-                print(percents.topk(5))
-                print(out.topk(5))
+            traced_script_module = torch.jit.trace(quantized_model, example)
+            #traced_script_module.save(filename+'_quant.pt')
+            traced_script_module_optimized = optimize_for_mobile(traced_script_module)
+            traced_script_module_optimized._save_for_lite_interpreter(filename+'_quant.ptl')
