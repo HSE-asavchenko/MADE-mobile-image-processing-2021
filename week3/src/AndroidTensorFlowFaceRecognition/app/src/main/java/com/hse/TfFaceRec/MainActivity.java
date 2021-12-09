@@ -304,6 +304,8 @@ public class MainActivity extends CameraActivity implements CameraBridgeViewBase
         mRgba=rotateMat(mRgba);
         Imgproc.cvtColor(mRgba, mGray, Imgproc.COLOR_BGR2GRAY);
 
+        Mat bgr=new Mat();
+        Imgproc.cvtColor(mRgba, bgr, Imgproc.COLOR_RGB2BGR);
 
         if (mAbsoluteFaceSize == 0) {
             int height = mGray.rows();
@@ -404,7 +406,7 @@ public class MainActivity extends CameraActivity implements CameraBridgeViewBase
             //gender
             float gender=cnn_outputs[2][0];
             str.append(gender>=0.6?" male":" female").append("\n");
-            Imgproc.rectangle(mRgba, facesArray[i].tl(), facesArray[i].br(), FACE_RECT_COLOR, 3);
+            Imgproc.rectangle(bgr, facesArray[i].tl(), facesArray[i].br(), FACE_RECT_COLOR, 3);
 
             Log.i(TAG,"age="+age+" gender="+gender);
 
@@ -416,7 +418,8 @@ public class MainActivity extends CameraActivity implements CameraBridgeViewBase
                 textViewResult.setText(result);
             }
         });
-        return mRgba;
+
+        return bgr;
     }
 
     private void initTensorFlowAndLoadModel() {

@@ -21,6 +21,7 @@ android {
         packagingOptions {
             pickFirst 'lib/arm64-v8a/libc++_shared.so'
             pickFirst 'lib/x86/libc++_shared.so'
+            pickFirst 'lib/x86_64/libc++_shared.so'
         }
     }
     aaptOptions {
@@ -49,6 +50,6 @@ dependencies {
     implementation "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation project(':opencv')
-    implementation 'org.pytorch:pytorch_android_lite:+'
-    implementation 'org.pytorch:pytorch_android_torchvision:+'
+    implementation 'org.pytorch:pytorch_android_lite:1.9.0'
+    implementation 'org.pytorch:pytorch_android_torchvision:1.9.0'
 }

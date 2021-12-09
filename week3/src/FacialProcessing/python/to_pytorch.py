@@ -4,9 +4,9 @@ from torch.utils.mobile_optimizer import optimize_for_mobile
 
 if __name__ == '__main__':
     output_model_dir='../app/src/main/assets/'
-    INPUT_SIZE=260 #224
+    INPUT_SIZE=224 #260 #
     example = torch.rand(1, 3, INPUT_SIZE, INPUT_SIZE)
-    filename='emotions_enet_b2_7'
+    filename='emotions_enet_b0_7'
     model=torch.load(filename+'.pt').cpu()
     model.eval()
     traced_script_module = torch.jit.trace(model, example)
