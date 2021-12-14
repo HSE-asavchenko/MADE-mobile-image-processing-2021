@@ -278,8 +278,8 @@ public class MainActivity extends AppCompatActivity {
             Paint p_text = new Paint();
             p_text.setColor(Color.WHITE);
             p_text.setStyle(Paint.Style.FILL);
-            p_text.setColor(Color.GREEN);
-            p_text.setTextSize(16);
+            p_text.setColor(Color.BLUE);
+            p_text.setTextSize(20);
 
             c.drawBitmap(bmp, 0, 0, null);
             for(DetectorData d : detectionResults){
