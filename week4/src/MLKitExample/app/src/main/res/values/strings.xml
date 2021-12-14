@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MLKit Example</string>
+    <string name="action_OpenGallery">Open</string>
+    <string name="action_LabelImage">Classify</string>
+    <string name="action_DetectText">Detect Text</string>
+    <string name="action_DetectTextTesseract">Detect Text (Tesseract)</string>
+    <string name="action_DetectObjects">Detect Objects</string>
+    <string name="action_BarCode">BarCode</string>
+</resources>

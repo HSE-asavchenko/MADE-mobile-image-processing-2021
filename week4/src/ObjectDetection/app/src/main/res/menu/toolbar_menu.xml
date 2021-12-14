@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_openGallery"
+        app:showAsAction="never"
+        android:title="@string/action_OpenGallery"/>
+    <item
+        android:id="@+id/action_detectLite"
+        app:showAsAction="never"
+        android:title="@string/action_detectLite"/>
+    <item
+        android:id="@+id/action_detectMobile"
+        app:showAsAction="never"
+        android:title="@string/action_detectMobile"/>
+    <item
+        android:id="@+id/action_detectLiteYolo"
+        app:showAsAction="never"
+        android:title="@string/action_detectLiteYolo"/>
+    <item
+        android:id="@+id/action_detectTorch"
+        app:showAsAction="never"
+        android:title="@string/action_detectTorch"/>
+    <item
+        android:id="@+id/action_segmentation"
+        app:showAsAction="never"
+        android:title="@string/action_segmentation"/>
+</menu>

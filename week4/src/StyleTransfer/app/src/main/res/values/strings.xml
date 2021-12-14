@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ImageStylization</string>
+    <string name="action_OpenGallery">Open...</string>
+    <string name="action_Stylize">Apply Style</string>
+    <string name="action_ChooseStyle">Choose style</string>
+</resources>
