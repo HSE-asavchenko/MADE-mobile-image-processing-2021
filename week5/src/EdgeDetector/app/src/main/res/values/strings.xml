@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EdgeDetector</string>
+    <string name="action_OpenGallery">Open Image File</string>
+    <string name="action_PerspectiveTransform">Perspective Transform</string>
+    <string name="action_EdgeDetector">Edge detector</string>
+    <string name="action_LinesDetector">Detect lines</string>
+    <string name="action_GapiTest">Test G-API</string>
+    <string name="action_Canny">Canny</string>
+    <string name="action_CirclesDetector">Detect circles</string>
+</resources>

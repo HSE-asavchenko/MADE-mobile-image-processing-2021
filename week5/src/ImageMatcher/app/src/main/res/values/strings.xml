@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ImageMatcher</string>
+    <string name="action_OpenGallery">Open Image File</string>
+    <string name="action_ExtractPointsOfInterest">Extract Points Of Interest</string>
+    <string name="action_MatchImages">Match Images</string>
+    <string name="action_StitchImages">Panorama</string>
+</resources>

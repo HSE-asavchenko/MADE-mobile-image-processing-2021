@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_openGallery"
+        app:showAsAction="never"
+        android:title="@string/action_OpenGallery"/>
+    <item
+        android:id="@+id/action_extractpoi"
+        app:showAsAction="never"
+        android:title="@string/action_ExtractPointsOfInterest"/>
+    <item
+        android:id="@+id/action_matchimages"
+        app:showAsAction="never"
+        android:title="@string/action_MatchImages"/>
+    <item
+        android:id="@+id/action_stitchimages"
+        app:showAsAction="never"
+        android:title="@string/action_StitchImages"/>
+
+</menu>
