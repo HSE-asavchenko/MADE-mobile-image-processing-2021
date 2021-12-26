@@ -1,5 +1,0 @@
-include ':app'
-def opencvsdk='D:/src_code/mobile/opencv-4.5.3-android-sdk/OpenCV-android-sdk'
-include ':opencv'
-project(':opencv').projectDir = new File(opencvsdk + '/sdk')
-

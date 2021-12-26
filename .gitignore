@@ -1,8 +1,14 @@
 syntax glob
 
-# gradle
+# Mac os
 .DS_Store
+
+# Android dev studio
+app/build*
+build
+sdk
 .gradle
+local.properties
 
 
 # IDE related files
