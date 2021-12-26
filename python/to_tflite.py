@@ -39,3 +39,4 @@ def convert_h5(input_model_file, quantize=False):
 if __name__ == '__main__':
     #convert_pb('age_gender_ethnicity_224_deep-03-0.13-0.97-0.88.pb', quantize=False)
     convert_h5('emotions_mobilenet_7.h5', quantize=False)
+    convert_h5('smiling_mobilenet.h5', quantize=False)
