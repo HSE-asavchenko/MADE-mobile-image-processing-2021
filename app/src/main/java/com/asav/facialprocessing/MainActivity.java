@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
     private CascadeClassifier faceCascadeClassifier =null, eyesCascadeClassifier =null;
     private MTCNNModel mtcnnFaceDetector=null;
     private AgeGenderEthnicityTfLiteClassifier facialAttributeClassifier=null;
-    private EmotionTfLiteClassifier emotionClassifierTfLite =null;
+    private EmotionTfLiteClassifier emotionClassifierTfLite=null;
+    private SmilingTfLiteClassifier smilingClassifierTfLite=null;
 
 
     @Override
@@ -246,6 +247,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_emotion_tf:
                 if(isImageLoaded()) {
                     mtcnnDetectionAndAttributesRecognition(emotionClassifierTfLite);
+                }
+                return true;
+            case R.id.action_smiling_tf:
+                if(isImageLoaded()) {
+                    mtcnnDetectionAndAttributesRecognition(smilingClassifierTfLite);
                 }
                 return true;
             default:
