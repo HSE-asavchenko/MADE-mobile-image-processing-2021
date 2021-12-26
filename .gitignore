@@ -1,0 +1,35 @@
+syntax glob
+
+# Mac os
+.DS_Store
+
+# Android dev studio
+app/build*
+build
+sdk
+.gradle
+local.properties
+
+
+# IDE related files
+.idea
+*.iml
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# Environments
+venv*/
+env*/
+
+
+# Misc
+.ipynb_checkpoints
+
+
+# My temp folders, files
+temp/

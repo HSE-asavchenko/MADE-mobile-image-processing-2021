@@ -1,0 +1,5 @@
+def opencvsdk='/Users/yana_belenko/Desktop/Andrei/OpenCV-android-sdk-nightly-build'
+include ':opencv'
+project(':opencv').projectDir = new File(opencvsdk + '/sdk')
+include ':app'
+rootProject.name = "HW1"

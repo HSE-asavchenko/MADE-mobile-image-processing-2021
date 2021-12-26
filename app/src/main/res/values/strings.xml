@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HW1</string>
+    <string name="action_OpenGallery">Open...</string>
+<!--    <string name="action_DetectFaceOpenCV">Detect face (OpenCV)</string>-->
+    <string name="action_DetectFaceMTCNN">Detect face (MTCNN)</string>
+    <string name="action_RecognizeAgeGender">Age and gender (TfLite)</string>
+    <string name="action_RecognizeEmotionTfLite">Emotion (TfLite)</string>
+    <string name="action_RecognizeSmilingTflite">Smiling (Tflite)</string>
+<!--    <string name="action_CompareFaces">Compare faces</string>-->
+</resources>
